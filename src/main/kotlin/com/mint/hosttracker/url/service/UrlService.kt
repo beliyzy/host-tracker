@@ -3,17 +3,17 @@ package com.mint.hosttracker.url.service
 import com.mint.hosttracker.url.domain.Url
 
 interface UrlService {
-    fun create(url: Url);
+    fun create(url: Url)
 
-    fun update(url: Url);
+    fun update(url: Url)
 
-    fun delete(id: Long);
+    fun delete(id: Long)
 
-    fun getById(id: Long): Url?;
+    fun getById(id: Long): Url?
 
-    fun getAll(): List<Url>;
+    fun getAll(): List<Url>
 
-    fun process(url: Url);
+    fun process(url: Url)
 
     fun updateUrl(id: Long, url: Url)
 

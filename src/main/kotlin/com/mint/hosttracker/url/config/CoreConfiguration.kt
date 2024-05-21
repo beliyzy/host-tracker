@@ -20,7 +20,7 @@ class CoreConfiguration {
 
     @Bean
     fun idToUrl(urlDAO: UrlDAO): MutableMap<Long, Url> {
-        var urlList: HashMap<Long, Url> = HashMap()
+        val urlList: HashMap<Long, Url> = HashMap()
         urlList.putAll(urlDAO.getAll().associateBy { it.id!! })
 
         return urlList

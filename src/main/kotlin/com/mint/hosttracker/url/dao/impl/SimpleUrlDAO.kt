@@ -54,7 +54,7 @@ class SimpleUrlDAO(private var jdbcTemplate: JdbcTemplate) : UrlDAO {
     }
 
     private fun jdbc(): JdbcTemplate {
-        return jdbcTemplate;
+        return jdbcTemplate
     }
 
     private class UrlRowMapper : RowMapper<Url> {

@@ -22,7 +22,7 @@ class SimpleUrlService(
         val createdUrl = urlDAO.create(url)
         if (createdUrl != null && isUrlValid(createdUrl)) {
             idToUrl[createdUrl.id!!] = createdUrl
-            addUrl(createdUrl.id!!, createdUrl)
+            addUrl(createdUrl.id, createdUrl)
         }
     }
 
@@ -35,7 +35,7 @@ class SimpleUrlService(
     }
 
     override fun delete(id: Long) {
-        val deletedId: Long? = urlDAO.delete(id);
+        val deletedId: Long? = urlDAO.delete(id)
         if (deletedId != null) {
             idToUrl.remove(deletedId)
             cancelTask(deletedId)
